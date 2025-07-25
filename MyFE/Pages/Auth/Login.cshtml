@@ -1,0 +1,22 @@
+﻿@page
+@model MyFE.Pages.Auth.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<h2>Login</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="LoginRequest.Email" class="form-control" />
+        <span asp-validation-for="LoginRequest.Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input asp-for="LoginRequest.Password" type="password" class="form-control" />
+        <span asp-validation-for="LoginRequest.Password" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
